@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   
   match '/aboutus' => 'houses#aboutus', :via => :get
   match '/welcome' => 'houses#welcome', :via => :get
+  match '/login' => 'houses#login', :via => :get
+  match '/signup' => 'houses#signup', :via => :get
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

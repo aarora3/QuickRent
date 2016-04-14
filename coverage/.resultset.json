@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/home/ubuntu/workspace/quickrent-app/app/controllers/houses_controller.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/controllers/houses_controller.rb": [
         1,
         null,
         1,
@@ -15,42 +15,42 @@
         null,
         null,
         1,
-        16,
-        16,
-        16,
-        8,
-        32,
-        null,
-        null,
-        16,
-        16,
-        3,
-        null,
-        16,
-        6,
-        6,
-        6,
-        null,
-        16,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
+        0,
+        0,
+        0,
+        0,
         0,
         null,
         null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
         1,
         1,
         1,
+        null,
+        null,
         1,
+        0,
+        0,
+        0,
         null,
         null,
         1,
@@ -73,18 +73,18 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/quickrent-app/app/controllers/application_controller.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/home/ubuntu/workspace/quickrent-app/app/helpers/application_helper.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/quickrent-app/app/helpers/houses_helper.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/helpers/houses_helper.rb": [
         1,
         null,
         1,
@@ -92,27 +92,15 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/quickrent-app/app/helpers/sessions_helper.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/helpers/sessions_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/quickrent-app/app/helpers/users_helper.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/helpers/users_helper.rb": [
         1,
-        null
-      ],
-      "/home/ubuntu/workspace/quickrent-app/app/models/house.rb": [
-        1,
-        1,
-        24,
-        null,
-        null
-      ],
-      "/home/ubuntu/workspace/quickrent-app/app/models/user.rb": [
-        1,
-        null,
         null
       ]
     },
-    "timestamp": 1460524347
+    "timestamp": 1460666746
   }
 }
