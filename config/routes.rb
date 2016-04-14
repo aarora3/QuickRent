@@ -2,7 +2,10 @@ Rails.application.routes.draw do
   get "houses/welcome"
   get "houses/login"
   get "houses/signup"
-
+  get "houses/myaccount"
+  get "houses/editprofile"
+  get "houses/review"
+  get "houses/privacy"
   
   match ':controller(/:action)', :via => :get
   
@@ -10,6 +13,10 @@ Rails.application.routes.draw do
   match '/welcome' => 'houses#welcome', :via => :get
   match '/login' => 'houses#login', :via => :get
   match '/signup' => 'houses#signup', :via => :get
+  match '/myaccount' => 'houses#myaccount', :via => :get
+  match '/editprofile' => 'houses#editprofile', :via => :get
+  match '/review' => 'houses#review', :via => :get
+  match '/privacy' => 'houses#privacy', :via => :get
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

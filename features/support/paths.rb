@@ -28,6 +28,14 @@ module NavigationHelpers
       '/login'
     when /^SIGNUP$/
       '/signup'
+    when /^the My Account page$/
+      '/houses/myaccount'
+    when /^Privacy Setting page$/
+      '/privacy'
+    when /^Edit Profile page$/
+      '/editprofile'
+    when /^My Reviews page$/
+      '/review'
     when /^the (edit|details) page for "(.*)"$/
       house = House.find_by_title($2)
       $1 == "details" ? house_path(house) : edit_house_path(house)

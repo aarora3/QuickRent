@@ -35,9 +35,6 @@ class HousesController < ApplicationController
     # default: render 'new' template
   end
   
-  def aboutus
-  end
-  
   helper_method :login
   def login
     "Hello!"
@@ -67,4 +64,19 @@ class HousesController < ApplicationController
     redirect_to houses_path
   end
 
+  def privacy
+    #
+  end
+  
+  def review
+    #
+  end
+  
+  def editprofile
+    #
+  end
+  
+  def aboutus
+  end
+  
 end
