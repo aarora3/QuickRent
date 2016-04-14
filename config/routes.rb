@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get "houses/welcome"
+  get "houses/login"
+  get "houses/signup"
+
+  
   match ':controller(/:action)', :via => :get
   
   match '/aboutus' => 'houses#aboutus', :via => :get
