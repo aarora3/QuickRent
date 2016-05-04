@@ -14,7 +14,7 @@ Background: houses have been added to database
   | 209                     | Endicott   | 10-Apr-2016  |
   | murray                  | Vestal     | 5-Apr-2016   |
 
-  And I am on the QuickRent home page
+  And I am on the House Listings page
 
 Scenario: sort houses in increasing order of release date
   When I follow "Date available"

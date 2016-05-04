@@ -1,14 +1,17 @@
-%h1 Login
+%h1 Post an Ad
 
 = form_tag houses_path do
 
-  = label :user, :name, 'Name'
-  = text_field :user, 'name'
+  = label :house, :title, 'House Number / Street'
+  = text_field :house, 'title'
 
-  = label :user, :password, 'Password'
-  = password_field :user, 'password'
+  = label :house, :rating, 'Area'
+  = select :house, :rating, ['Vestal','Binghamton','Downtown','Endicott']
 
-  = submit_tag 'Login'
+  = label :house, :release_date, 'Date available On'
+  = date_select :house, :release_date
+
+  = submit_tag 'Save Changes'
   
   
 = link_to 'Back to House Listings', houses_path

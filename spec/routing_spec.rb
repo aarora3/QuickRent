@@ -4,19 +4,11 @@ RSpec.describe HousesController, type: :routing do
   describe "routing" do
 
     it "routes to #welcome" do
-      expect(:get => "/").to route_to("houses#welcome")
+      expect(:get => "/").to route_to("users#admin")
     end
 
     it "routes to #new" do
       expect(:get => "/houses/new").to route_to("houses#new")
-    end
-
-    it "routes to #show" do
-      expect(:get => "/houses/show").to route_to("houses#show")
-    end
-
-    it "routes to #edit" do
-      expect(:get => "/houses/edit").to route_to("houses#edit")
     end
 
     it "routes to #create" do

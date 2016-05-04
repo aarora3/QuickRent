@@ -57,3 +57,9 @@ Then /I should (not )?see the following houses: (.*)$/ do |not_see, house_list|
     end
   end
 end
+
+Then /I should see all house listings/ do
+  # Make sure that all the menu itemms in the app are visible in the table
+  # page.should have_css "#myTable tr", :count => House.count
+  page.assert_selector('#houses tbody tr', count: House.count)
+end

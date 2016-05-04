@@ -1,7 +1,7 @@
 class HousesController < ApplicationController
 
   def house_params
-  #  params.require(:house).permit(:title, :rating, :description, :release_date)
+    params.require(:house).permit(:title, :rating, :description, :release_date)
   end
 
   def show
@@ -35,10 +35,6 @@ class HousesController < ApplicationController
     # default: render 'new' template
   end
   
-  helper_method :login
-  def login
-    "Hello!"
-  end
 
   def create
     @house = House.create!(house_params)
@@ -62,18 +58,6 @@ class HousesController < ApplicationController
     @house.destroy
     flash[:notice] = "House '#{@house.title}' deleted."
     redirect_to houses_path
-  end
-
-  def privacy
-    #
-  end
-  
-  def review
-    #
-  end
-  
-  def editprofile
-    #
   end
   
   def aboutus

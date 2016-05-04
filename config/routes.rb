@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
   
+  get 'aboutus' => 'houses#aboutus'
   
   resources :users
   resources :houses

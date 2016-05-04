@@ -18,24 +18,16 @@ module NavigationHelpers
       new_house_path
     when /^the home\s?page$/
       '/houses'
-    when /^the login\s?page$/
-      '/houses'
-    when /^the QuickRent home page$/
-      '/houses'
-    when /^welcome page$/
-      '/houses/welcome'
-    when /^LOGIN$/
-      '/login'
-    when /^SIGNUP$/
-      '/signup'
-    when /^the My Account page$/
-      '/houses/myaccount'
-    when /^Privacy Setting page$/
-      '/privacy'
-    when /^Edit Profile page$/
-      '/editprofile'
-    when /^My Reviews page$/
-      '/review'
+    when /^the QucikRent welcome page$/
+      users_path
+    when /^the Login page$/
+      login_path
+    when /^the Sign Up page$/
+      new_user_path
+    when /^the House Listings page$/
+      houses_path
+    when /^the About Us page$/
+      aboutus_path
     when /^the (edit|details) page for "(.*)"$/
       house = House.find_by_title($2)
       $1 == "details" ? house_path(house) : edit_house_path(house)

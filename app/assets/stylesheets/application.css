@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+table#houses {
+  margin: 10px;
+  border-collapse: collapse;
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+table#houses th {
+  border: 2px solid white;
+  font-weight: bold;
+  background-color: wheat;
+}
+table#houses th, table#houses td {
+  padding: 4px;
+  text-align: left;
+}
+table#houses th.hilite {
+  background-color: yellow;
+}

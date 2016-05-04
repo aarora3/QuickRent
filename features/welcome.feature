@@ -5,18 +5,28 @@
 #         Given I am viewing welcome page
 #         Then page should have the content "Welcome to QuickRent."
 
-Feature: display welcome page
+Feature: welcome page links
   As a new user 
   I want to get onto the site 
   so that I can look at the site and LOGIN/SIGNUP.
   
-Scenario: LOGIN
-  Given I am on welcome page 
-  When  I follow "LOGIN"
-  Then I should be on LOGIN
+Scenario: Login link
+  Given I am on the QucikRent welcome page 
+  When  I follow "Login"
+  Then I should be on the Login page
   
 
-Scenario: SIGNUP
-  Given I am on welcome page
-  When  I follow "SIGNUP"
-  Then I should be on SIGNUP
+Scenario: Sign Up link
+  Given I am on the QucikRent welcome page
+  When  I follow "Sign Up"
+  Then I should be on the Sign Up page
+
+Scenario: House Listings link
+  Given I am on the QucikRent welcome page
+  When  I follow "House Listings"
+  Then I should be on the House Listings page
+
+Scenario: About Us link
+  Given I am on the QucikRent welcome page
+  When  I follow "About Us"
+  Then I should be on the About Us page
