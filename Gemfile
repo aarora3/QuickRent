@@ -1,12 +1,13 @@
 source 'https://rubygems.org'
 
 ruby '2.3.0'
-gem 'rails', '4.2.1'
+gem 'rails', '4.2.6'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
+  gem 'bcrypt-ruby'
   gem 'sqlite3'
   gem 'byebug'
   gem 'database_cleaner', '1.4.1'

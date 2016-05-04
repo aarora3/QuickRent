@@ -26,6 +26,5 @@
         %td= house.release_date
         %td= link_to "More about #{house.title}", house_path(house)
 
-
-= link_to "Back to Welcome page", controller: "welcome"
 %p~ "\n"
+= link_to 'Back to Welcome page', users_path

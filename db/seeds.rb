@@ -18,5 +18,3 @@ houses.each do |house|
   House.create!(house)
 end
 
-User.create(name: 'Ankush', password: 'arora')
-

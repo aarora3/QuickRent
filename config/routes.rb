@@ -1,28 +1,21 @@
 Rails.application.routes.draw do
-  get "houses/welcome"
-  get "houses/login"
-  get "houses/signup"
-  get "houses/myaccount"
-  get "houses/editprofile"
-  get "houses/review"
-  get "houses/privacy"
+  root 'users#admin'
+  # rails s -p $PORT -b $IP
+  get 'sessions/new'
   
-  match ':controller(/:action)', :via => :get
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
   
-  match '/aboutus' => 'houses#aboutus', :via => :get
-  match '/welcome' => 'houses#welcome', :via => :get
-  match '/login' => 'houses#login', :via => :get
-  match '/signup' => 'houses#signup', :via => :get
-  match '/myaccount' => 'houses#myaccount', :via => :get
-  match '/editprofile' => 'houses#editprofile', :via => :get
-  match '/review' => 'houses#review', :via => :get
-  match '/privacy' => 'houses#privacy', :via => :get
+  
+  resources :users
+  resources :houses
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'houses#welcome'
-# rails s -p $PORT -b $IP
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -31,7 +24,6 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  resources :houses
 #  resources :houses do
 #    member do
 #    get 'aboutus'
