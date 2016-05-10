@@ -21,3 +21,16 @@ houses.each do |house|
   House.create!(house)
 end
 
+histories = [{:user_name => 'akki4141' , :user_id => '2', :email => 'adani1@binghamton.edu', :house_address => '11 Catherine Street', 
+            :start_date => '10-Jan-2016', :end_date => '10-Apr-2016', :total_cost => '450', :rating => '5'},
+            {:user_name => 'ankush12' , :user_id => '1', :email => 'aarora3@binghamton.edu', :house_address => '11 Catherine Street',
+            :start_date => '10-Feb-2016', :end_date => '10-Apr-2016', :total_cost => '300', :rating => '5'},
+            {:user_name => 'rasika11' , :user_id => '3', :email => 'rasika1@binghamton.edu', :house_address => '44 Schiller',
+            :start_date => '15-Feb-2016', :end_date => '20-May-2016', :total_cost => '310', :rating => '4'},
+            {:user_name => 'dobby08' , :user_id => '4', :email => 'dobby12@binghamton.edu', :house_address => '206 Main Street', 
+            :start_date => '12-Aug-2015', :end_date => '20-Jan-2015', :total_cost => '800', :rating => '3'},
+        ]
+
+histories.each do |history|
+    History.create!(history)
+end

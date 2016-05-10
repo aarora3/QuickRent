@@ -1,0 +1,29 @@
+%h1 History
+
+%br
+%br
+
+%table#houses
+  %thead
+    %tr
+      %th UserName
+      %th User ID
+      %th Email
+      %th Rented House
+      %th Start Date
+      %th End Date
+      %th Total Cost ($)
+      %th Rating
+  %tbody
+    - @histories.each do |history|
+      %tr
+        %td= history.user_name
+        %td= history.user_id
+        %td= history.email
+        %td= history.house_address
+        %td= history.start_date
+        %td= history.end_date
+        %td= history.total_cost
+        %td= history.rating
+
+= link_to 'Back to Welcome page', users_path
