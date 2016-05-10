@@ -18,12 +18,12 @@ Feature: Sign up on QuickRent
    # Sign up successful
    Then I should see "User was successfully created"
 
-# Scenario: password and passwordconfirmation dont match
-#   When I am on the Sign Up page
-#   And  I fill in "Name" with "Ankush"
-#   And  I fill in "Email" with "aarora3@binghamton.edu"
-#   And  I fill in "Password" with "arora"
-#   And  I fill in "passwordconfirmation" with "abc"
-#   And I press "Submit"
-   # Sign up successful
-#   Then I should see "Password and Password Confirmation dont match"
+ Scenario: password and passwordconfirmation dont match
+   When I am on the Sign Up page
+   And  I fill in "Name" with "Ankush"
+   And  I fill in "Email" with "aarora3@binghamton.edu"
+   And  I fill in "Password" with "arora"
+   And  I fill in "passwordconfirmation" with "abc"
+   And I press "Submit"
+  # Sign up successful
+   Then I should see "Password and Password Confirmation dont match"

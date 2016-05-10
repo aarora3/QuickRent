@@ -2,11 +2,13 @@
 
 <h1>QuickRent Admin page</h1>
 
-<table>
+<table border="1">
   <thead>
     <tr>
+      <th>User Id</th>
       <th>Name</th>
       <th>Email</th>
+      <th>Contact Number</th>
       <th colspan="4"></th>
     </tr>
   </thead>
@@ -14,8 +16,10 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
+        <td><%= user.user_id %></td>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
+        <td><%= user.contactnumber %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>

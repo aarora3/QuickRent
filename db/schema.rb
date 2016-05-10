@@ -11,16 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160504174335) do
+ActiveRecord::Schema.define(version: 20160510011944) do
 
   create_table "houses", force: :cascade do |t|
     t.string   "title"
     t.string   "rating"
     t.text     "description"
-    t.datetime "release_date"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.float    "price"
+    t.date     "todate"
+    t.string   "name"
+    t.string   "email"
+    t.string   "contactnumber"
+    t.date     "release_date"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -39,6 +43,9 @@ ActiveRecord::Schema.define(version: 20160504174335) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "password_digest"
+    t.integer  "user_id"
+    t.boolean  "admin"
+    t.string   "contactnumber"
   end
 
 end

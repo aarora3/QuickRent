@@ -27,3 +27,10 @@ Scenario: login with invalid credentials
   And I press "Submit"
   # Then login should be unsuccessful
   Then I should see "Invalid Username/Password"
+
+Scenario: login with blank credentials
+  When I fill in "Email" with ""
+  When I fill in "Password" with ""
+  And I press "Submit"
+  # Then login should be unsuccessful
+  Then I should see "Invalid Username/Password"

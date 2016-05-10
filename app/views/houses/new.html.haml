@@ -8,11 +8,28 @@
   = label :house, :rating, 'Area'
   = select :house, :rating, ['Vestal','Binghamton','Downtown','Endicott']
 
-  = label :house, :release_date, 'Date available On'
+  = label :house, :price, 'Price'
+  = text_field :house, 'price'
+
+  = label :house, :release_date, 'Available From'
   = date_select :house, :release_date
 
-  = submit_tag 'Save Changes'
-  
-  
+  = label :house, :release_date, 'Available To'
+  = date_select :house, :todate
+
+  = label :house, :release_date, 'Owner'
+  = text_field :house, :name
+
+  = label :house, :release_date, 'Owner Email'
+  = email_field :house, :email
+
+  = label :house, :release_date, 'Owner Contact Number'
+  = text_field :house, :contactnumber
+
+
+
+  = submit_tag 'Submit'
+%p~ "\n"
+%p~ "\n"
 = link_to 'Back to House Listings', houses_path
 %p~ "\n"

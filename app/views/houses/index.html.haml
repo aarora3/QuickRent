@@ -17,7 +17,8 @@
     %tr
       %th{:class => @title_header}= link_to 'House', houses_path(:sort_by => 'title'), :id => 'title_header'
       %th Area
-      %th{:class => @release_date_header}= link_to "Date available", houses_path(:sort_by => 'release_date'), :id => 'release_date_header'
+      %th{:class => @release_date_header}= link_to "From Date", houses_path(:sort_by => 'release_date'), :id => 'release_date_header'
+      %th To Date
       %th{:class => @price_header}= link_to "Price", houses_path(:sort_by => 'price'), :id => 'price_header'
       %th More Info
       %th Reviews
@@ -27,6 +28,7 @@
         %td= house.title 
         %td= house.rating
         %td= house.release_date
+        %td= house.todate
         %td= house.price
         %td= link_to "More about #{house.title}", house_path(house)
         %td= link_to "Review #{house.title}", house_path(house)

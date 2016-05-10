@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'users#admin'
+  root 'users#index'
   # rails s -p $PORT -b $IP
   get 'sessions/new'
   
@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
   
   get 'aboutus' => 'houses#aboutus'
+  get 'contactus' => 'houses#contactus'
+  get 'admin' => 'users#admin'
   
   resources :users
   resources :houses
