@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160510070544) do
+ActiveRecord::Schema.define(version: 20160510192709) do
 
   create_table "histories", force: :cascade do |t|
     t.string  "user_name"
@@ -36,6 +36,8 @@ ActiveRecord::Schema.define(version: 20160510070544) do
     t.string   "email"
     t.string   "contactnumber"
     t.date     "release_date"
+    t.integer  "house_id"
+    t.integer  "user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
