@@ -7,30 +7,29 @@
         <td> <b>Area:</b>
         = @house.rating
     %tr
-        <td> <b>Date available from:         </b>
+        <td> <b>Date available from:</b>
         = @house.release_date.strftime("%B %d, %Y")
     %tr
-        <td> <b>Date available to:           </b>
+        <td> <b>Date available to:</b>
         = @house.todate.strftime("%B %d, %Y")
     %tr
-        <td> <b>Price per day:               </b>
+        <td> <b>Price per day:</b>
         = @house.price
     %tr
-        <td> <b>Owner Name:                  </b>
+        <td> <b>Owner Name:</b>
         = @house.name
     %tr
-        <td> <b>Owner email:                 </b>
+        <td> <b>Owner email:</b>
         = @house.email
     %tr
-        <td> <b>Owner contact number:        </b>
+        <td> <b>Owner contact number:</b>
         = @house.contactnumber
 
-
-  
-%h3 Description:
+%h4 More Description:
 
 %p#description= @house.description
-
-= link_to 'Edit', edit_house_path(@house)
-= button_to 'Delete', house_path(@house), :method => :delete, :confirm => 'Are you sure?'
+%br
+%br
+-#= link_to 'Edit', edit_house_path(@house)
+-#= button_to 'Delete', house_path(@house), :method => :delete, :confirm => 'Are you sure?'
 = link_to 'Back to house listings', houses_path

@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<h1>My Account</h1>
 <p>
   <strong>Name:</strong>
   <%= @user.name %>
@@ -15,5 +15,8 @@
   <%= @user.contactnumber %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Edit Profile', edit_user_path(@user) %> |
+<br><br>
+<%= link_to 'Back to Welcome page', users_path %>
+<br><br>
+<%= link_to 'House Listings', houses_path %>

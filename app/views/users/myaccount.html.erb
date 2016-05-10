@@ -1,6 +1,6 @@
 <h1> My Account </h1>
 
-<p><%= link_to 'Edit Profile', edit_user_path(@user) %></p>
+<p><%= link_to 'Edit Profile', edit_user_path(current_user) %></p>
 
 <p><%= link_to "Privacy Setting", '/privacy', :method => :get %></p>
 
