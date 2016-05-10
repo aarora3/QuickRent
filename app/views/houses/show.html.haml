@@ -2,14 +2,34 @@
 
 %h2 Details about #{@house.title}
 
--#%p  Area = @house.rating
--#%p  Price = @house.price
--#%p  From date = @house.release_date
--#%p  To date = @house.todate
--#%p  Owner = @house.name
--#%p  Owner Email = @house.email
--#%p  Owner Contact Number = @house.contactnumber
--#%p  Description= @house.description
+%table#details
+    %tr
+        <td> <b>Area:</b>
+        = @house.rating
+    %tr
+        <td> <b>Date available from:         </b>
+        = @house.release_date.strftime("%B %d, %Y")
+    %tr
+        <td> <b>Date available to:           </b>
+        = @house.todate.strftime("%B %d, %Y")
+    %tr
+        <td> <b>Price per day:               </b>
+        = @house.price
+    %tr
+        <td> <b>Owner Name:                  </b>
+        = @house.name
+    %tr
+        <td> <b>Owner email:                 </b>
+        = @house.email
+    %tr
+        <td> <b>Owner contact number:        </b>
+        = @house.contactnumber
+
+
+  
+%h3 Description:
+
+%p#description= @house.description
 
 = link_to 'Edit', edit_house_path(@house)
 = button_to 'Delete', house_path(@house), :method => :delete, :confirm => 'Are you sure?'

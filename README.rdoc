@@ -29,39 +29,13 @@ ruby '2.3.0'
 9. To run cucumber: 'cucumber'
 10. To run rspecs: 'rspec spec'
 11. to push changes onto github:
-    git add -A
-    git commit -am "version 1.11"
-    git push origin master
+
+git add -
+git commit -am "version 1.11"
+git push origin master
+
 12. to push changes onto heroku:
-    heroku login
-    heroku create
-    git push heroku master
 
-
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+heroku login
+heroku create
+git push heroku master
