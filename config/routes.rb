@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'aboutus' => 'houses#aboutus'
   get 'contactus' => 'houses#contactus'
   get 'admin' => 'users#admin'
+  get 'myaccount' => 'users#myaccount'
   
   resources :users
   resources :houses

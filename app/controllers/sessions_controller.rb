@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       if user.admin?
         redirect_to admin_path
       else
-        redirect_to root_url, :notice => "Login Successful"
+        redirect_to myaccount_path, :notice => "Login Successful"
       #p "User login successful"
       #flash[:success] = 'Login Successful'
       end
