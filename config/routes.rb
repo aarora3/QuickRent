@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get 'contactus' => 'houses#contactus'
   get 'admin' => 'users#admin'
   get 'myaccount' => 'users#myaccount'
-  get 'history' => 'users#history' 
+  get 'history' => 'users#history'
   
   resources :users
   resources :houses

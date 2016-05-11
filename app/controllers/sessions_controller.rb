@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       #session[:current_user_id] = @user.id
       if user.admin?
+        log_in user
         redirect_to admin_path
       else
         #redirect_to myaccount_path, :notice => "Login Successful"

@@ -1,4 +1,5 @@
 class HousesController < ApplicationController
+  include SessionsHelper
 
   def house_params
     params.require(:house).permit(:title, :rating, :description, :release_date, :price, :todate, :name, :email, :contactnumber)
