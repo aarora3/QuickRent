@@ -29,6 +29,8 @@ histories = [{:user_name => 'akki4141' , :user_id => '2', :email => 'adani1@bing
             :start_date => '15-Feb-2016', :end_date => '20-May-2016', :total_cost => '310', :rating => '4'},
             {:user_name => 'dobby08' , :user_id => '4', :email => 'dobby12@binghamton.edu', :house_address => '206 Main Street', 
             :start_date => '12-Aug-2015', :end_date => '20-Jan-2015', :total_cost => '800', :rating => '3'},
+            {:user_name => 'akki4141' , :user_id => '2', :email => 'adani1@binghamton.edu', :house_address => 'murray', 
+            :start_date => '10-Jan-2016', :end_date => '10-Apr-2016', :total_cost => '450', :rating => '5'},
         ]
 
 histories.each do |history|

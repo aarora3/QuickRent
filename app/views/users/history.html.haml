@@ -3,27 +3,31 @@
 %br
 %br
 
-%table#houses
-  %thead
-    %tr
-      %th UserName
-      %th User ID
-      %th Email
-      %th Rented House
-      %th Start Date
-      %th End Date
-      %th Total Cost ($)
-      %th Rating
-  %tbody
-    - @histories.each do |history|
+= form_tag history_path, :method => 'get' do
+  = text_field_tag :search, params[:search]
+  = submit_tag "Search", :name => nil
+
+  %table#houses
+    %thead
       %tr
-        %td= history.user_name
-        %td= history.user_id
-        %td= history.email
-        %td= history.house_address
-        %td= history.start_date
-        %td= history.end_date
-        %td= history.total_cost
-        %td= history.rating
+        %th UserName
+        %th User ID
+        %th Email
+        %th Rented House
+        %th Start Date
+        %th End Date
+        %th Total Cost ($)
+        %th Rating
+    %tbody
+      - @histories.each do |history|
+        %tr
+          %td= history.user_name
+          %td= history.user_id
+          %td= history.email
+          %td= history.house_address
+          %td= history.start_date
+          %td= history.end_date
+          %td= history.total_cost
+          %td= history.rating
 
 = link_to 'Back to Welcome page', users_path
