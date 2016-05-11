@@ -14,7 +14,7 @@
   <strong>Contact Number:</strong>
   <%= @user.contactnumber %>
 </p>
-
+<p><%= current_user.name %></p>
 <%= link_to 'Edit Profile', edit_user_path(@user) %> |
 <br><br>
 <%= link_to 'Back to Welcome page', users_path %>

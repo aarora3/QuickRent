@@ -1,5 +1,4 @@
 class ReviewsController < ApplicationController
-  include SessionsHelper
   before_action :set_review, only: [:show, :edit, :update, :destroy]
 
   # GET /reviews

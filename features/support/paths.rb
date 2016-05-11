@@ -28,6 +28,12 @@ module NavigationHelpers
       houses_path
     when /^the About Us page$/
       aboutus_path
+    when /^My Reviews page$/
+      reviews_path
+    when /^reviews_path\(house\)$/
+      reviews_path(id)
+    when /^the New Reviews page$/
+      '/reviews/new'
     when /^the (edit|details) page for "(.*)"$/
       house = House.find_by_title($2)
       $1 == "details" ? house_path(house) : edit_house_path(house)
