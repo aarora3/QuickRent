@@ -14,6 +14,7 @@ class UsersController < ApplicationController
 
   def history
     @histories = History.all
+    @histories = History.search(params[:search])    
   end
   # GET /users/1
   # GET /users/1.json
