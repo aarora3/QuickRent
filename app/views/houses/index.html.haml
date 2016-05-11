@@ -31,7 +31,7 @@
         %td= house.todate
         %td= house.price
         %td= link_to "More about #{house.title}", house_path(house)
-        %td= link_to "Review #{house.title}", house_path(house)
+        %td= link_to "Review #{house.title}", reviews_path(house)
 
 %p~ "\n"
 %p~ "\n"

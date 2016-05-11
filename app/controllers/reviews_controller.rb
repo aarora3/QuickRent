@@ -8,6 +8,8 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/1
   def show
+    id = params[:id] # retrieve house ID from URI route
+    @review = Review.find(id)
   end
 
   # GET /reviews/new
