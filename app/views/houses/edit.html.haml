@@ -9,6 +9,21 @@
 
   = label :house, :release_date, 'Date available On'
   = date_select :house, :release_date
+  
+  = label :house, :rating, 'Area'
+  = text_field :house, :rating
+  
+  = label :house, :price, 'Price per day'
+  = number_field :house, :price
+  
+  = label :house, :name, 'Owner name'
+  = text_field :house, :name
+  
+  = label :house, :email, 'Owner email'
+  = text_field :house, :email
+  
+  = label :house, :contactnumber, 'Owner contact number'
+  = text_field :house, :contactnumber
 
   = submit_tag 'Update House Listing'
 %br

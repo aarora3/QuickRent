@@ -1,35 +1,88 @@
 -# in app/views/houses/show.html.haml
 
+
+:css
+  html { height: 100% }
+  body { height: 100%; margin: 0; padding: 0 }
+  #map-canvas { height: 100% }
+  %script{:src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyDPFRxeHqtP7GBnX6W8P8vs-eah_L0tfIA&sensor=false", :type => "text/javascript"}
+:javascript
+  function set_map(rating, title){
+    var mapOptions = {
+      center: new google.maps.LatLng(25.687944,-100.309403),
+      zoom: 8,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map-canvas"),
+    mapOptions);
+
+    if(rating == ""){
+      address = title;
+    }else{
+      address = rating + ',' + title;
+    }
+
+    var geocoder = new google.maps.Geocoder();
+
+    geocoder.geocode({
+      'address':address
+    },
+
+    function(result, status){
+      if (status == google.maps.GeocoderStatus.OK){
+        map.setCenter(result[0].geometry.location);
+
+        var marker = new google.maps.Marker({
+          map: map,
+          position: result[0].geometry.location
+        });
+      }else{
+        alert("Geocode was not successful for the following reason: " + status);
+      }
+    });
+    return false;
+  }
+
+  $(document).ready(function(){
+    set_map(' @house.rating ', ' @house.title ');
+  })
+    
 %h2 Details about #{@house.title}
 
 %table#details
-    %tr
-        <td> <b>Area:</b>
-        = @house.rating
-    %tr
-        <td> <b>Date available from:</b>
-        = @house.release_date.strftime("%B %d, %Y")
-    %tr
-        <td> <b>Date available to:</b>
-        = @house.todate.strftime("%B %d, %Y")
-    %tr
-        <td> <b>Price per day:</b>
-        = @house.price
-    %tr
-        <td> <b>Owner Name:</b>
-        = @house.name
-    %tr
-        <td> <b>Owner email:</b>
-        = @house.email
-    %tr
-        <td> <b>Owner contact number:</b>
-        = @house.contactnumber
+  %tr
+    <td> <b>Area:</b>
+    = @house.rating
+  %tr
+    <td> <b>Date available from:</b>
+    = @house.release_date.strftime("%B %d, %Y")
+  %tr
+    <td> <b>Date available to:</b>
+    = @house.todate.strftime("%B %d, %Y")
+  %tr
+    <td> <b>Price per day:</b>
+    = @house.price
+  %tr
+    <td> <b>Owner Name:</b>
+    = @house.name
+  %tr
+    <td> <b>Owner email:</b>
+    = @house.email
+  %tr
+    <td> <b>Owner contact number:</b>
+    = @house.contactnumber
 
 %h4 More Description:
+
+
 
 %p#description= @house.description
 %br
 %br
--#= link_to 'Edit', edit_house_path(@house)
+= link_to 'Edit', edit_house_path(@house)
+%br
 -#= button_to 'Delete', house_path(@house), :method => :delete, :confirm => 'Are you sure?'
+%br
 = link_to 'Back to house listings', houses_path
+
+#map-canvas{:style => "width:300px;height:200px"}/

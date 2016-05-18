@@ -43,11 +43,13 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         log_in @user
-        flash[:success] = "Welcome to the Sample App!"
-        redirect_to @user
-        #format.html { redirect_to user_path(@user.id), notice: 'User was successfully created.' }
-        #format.json { render :show, status: :created, location: @user }
+        flash[:success] = "Welcome to QuickRent!"
+        #redirect_to @user
         #session[:current_user_id] = @user.id
+        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        #format.html { redirect_to user_path(@user.id), notice: 'User was successfully created.' }
+        format.json { render :show, status: :created, location: @user }
+        
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
@@ -90,7 +92,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email, :password, :user_id, :contactnumber)
+      params.require(:user).permit(:name, :email, :password, :user_id, :contactnumber, :house_address, :city)
     end
     
 

@@ -48,6 +48,7 @@ class HousesController < ApplicationController
   end
 
   def update
+    p current_user
     @house = House.find params[:id]
     @house.update_attributes!(house_params)
     flash[:notice] = "#{@house.title} was successfully updated."
