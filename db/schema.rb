@@ -40,6 +40,13 @@ ActiveRecord::Schema.define(version: 20160518174255) do
     t.integer  "user_id"
   end
 
+  create_table "messages", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "reviews", force: :cascade do |t|
     t.integer  "rating"
     t.text     "comment"
