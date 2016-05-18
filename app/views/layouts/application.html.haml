@@ -8,13 +8,7 @@
   %body
     %h1.title QuickRent
 
-    -if !logged_in? 
-    
-      = link_to "Login", login_path
-      
-    - elsif current_user
-    
+    - if logged_in?
       = link_to "Logout", log_out
-      
-    = yield
 
+    = yield

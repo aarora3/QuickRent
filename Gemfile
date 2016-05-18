@@ -7,6 +7,7 @@ gem 'rails', '4.2.6'
 
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
+  gem 'bootstrap-sass'
   gem 'bcrypt-ruby'
   gem 'sqlite3'
   gem 'byebug'
@@ -15,6 +16,7 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-rails', '3.3.2'
   gem 'ZenTest', '4.11.0'
+  gem 'rails_12factor'
 end
 
 group :test do
@@ -24,6 +26,7 @@ group :test do
 end
 group :production do
 #  gem 'simplecov'
+  gem 'rails_12factor'
   gem 'pg'
 end
 

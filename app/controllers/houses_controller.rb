@@ -11,6 +11,7 @@ class HousesController < ApplicationController
   end
 
   def index
+    current_user = User.find_by_id(session[:current_user_id])
     @all_ratings = House.ratings
     @rating_selection = params[:ratings] || session[:ratings] || {}
     if @rating_selection == {} then

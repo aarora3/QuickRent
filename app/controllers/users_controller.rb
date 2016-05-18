@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
+    current_user = User.find_by_id(session[:current_user_id])
     @users = User.all
   end
   
@@ -18,6 +19,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @user = User.find(params[:id])
   end
 
   # GET /users/new
@@ -40,11 +42,12 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to user_path(@user.id), notice: 'User was successfully created.' }
-        #user = User.find_by(email: params[:session][:email].downcase)
-        #format.html { redirect_to user, notice: 'User was successfully created.' }
-        format.json { render :show, status: :created, location: @user }
-        session[:current_user_id] = @user.id
+        log_in @user
+        flash[:success] = "Welcome to the Sample App!"
+        redirect_to @user
+        #format.html { redirect_to user_path(@user.id), notice: 'User was successfully created.' }
+        #format.json { render :show, status: :created, location: @user }
+        #session[:current_user_id] = @user.id
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }

@@ -10,10 +10,14 @@ class SessionsController < ApplicationController
       #session[:current_user_id] = @user.id
       if user.admin?
         log_in user
-        redirect_to admin_path
+        remember user
+        #session[:current_user_id] = user.id
+        redirect_to admin_path, :notice => "Welcome Admin"
       else
         #redirect_to myaccount_path, :notice => "Login Successful"
         log_in user
+        remember user
+        #session[:current_user_id] = user.id
         redirect_to user, :notice => "Login Successful"
         #p "User login successful"
         #flash[:success] = 'Login Successful'
@@ -25,7 +29,8 @@ class SessionsController < ApplicationController
   end  
 
   def destroy
-    log_out
+    #log_out
+    log_out if logged_in?
     redirect_to root_url
   end
 end
