@@ -157,6 +157,9 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (~> 1.1)
+    simple_form (3.2.1)
+      actionpack (> 4, < 5.1)
+      activemodel (> 4, < 5.1)
     simplecov (0.10.0)
       docile (~> 1.1.0)
       json (~> 1.8)
@@ -200,6 +203,7 @@ DEPENDENCIES
   rails (= 4.2.6)
   rspec-rails (= 3.3.2)
   sass-rails (~> 5.0.3)
+  simple_form (~> 3.2, >= 3.2.1)
   simplecov
   sqlite3
   uglifier (>= 2.7.1)
@@ -208,4 +212,4 @@ RUBY VERSION
    ruby 2.3.0p0
 
 BUNDLED WITH
-   1.12.1
+   1.12.4
