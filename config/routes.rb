@@ -18,11 +18,13 @@ Rails.application.routes.draw do
   get 'mainst' => 'houses#mainst'
   get 'chapin' => 'houses#chapin'
   get 'floral' => 'houses#floral'
+  get 'faq' => 'houses#faq'
+  #get 'myaccount' => 'users#myaccount'
   get 'contactus' => 'houses#contactus'
   get 'admin' => 'users#admin'
   get 'history' => 'users#history'
   get 'index' => 'messages#index'
-  get 'accountsetting' => 'users#accountsetting'
+  #get 'accountsetting' => 'users#accountsetting'
   get "houses/myaccount"
   get "houses/editprofile"
   get "houses/myreview"
@@ -31,13 +33,18 @@ Rails.application.routes.draw do
   match '/editprofile' => 'houses#editprofile', :via => :get
   match '/myreview' => 'houses#myreview', :via => :get
   match '/privacy' => 'houses#privacy', :via => :get
-  
-  
+
+  get 'user_history' => 'users#user_history'
+
+  get 'messages' => 'messages#new'
+  get 'users/:id/privacy' => 'users#privacy'
+
   resources :users
+  resources :histories
+  
   resources :houses
   resources :reviews
-  resources :histories
   resources :messages
-
+  resources :dealers
 
 end

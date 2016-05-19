@@ -52,6 +52,7 @@ end
 
 Then /I should see "(.*)" in the House Listings table/ do |e1|
   #  ensure that that e1 occurs before e2.
+  visit houses_path
   page.assert_selector("#houses tbody tr", :text => e1)
   #page.body =~ /.#{e1}.*#{e2}/
   #  page.body is the entire content of the page as a string.

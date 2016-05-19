@@ -1,5 +1,7 @@
-Feature: About Us
-    About Us page should have content
+Feature: View About QuickRent
+    As a viewer
+    I want to see the About Us
+    So that I can have some information
  
 Scenario: About Us page content
     Given I am on the About Us page

@@ -33,14 +33,21 @@ class HousesController < ApplicationController
   end
 
   def new
-    # default: render 'new' template
+    @house = House.new
   end
   
 
   def create
-    @house = House.create!(house_params)
-    flash[:notice] = "#{@house.title} was successfully created."
-    redirect_to houses_path
+    @house = House.new(house_params)
+    respond_to do |format|
+      if @house.save
+        flash[:success] = "Success!"
+        format.html { redirect_to houses_path, notice: "#{@house.title} was successfully created." }
+      else
+        format.html { render :new }
+        format.json { render json: @house.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def edit
@@ -58,7 +65,7 @@ class HousesController < ApplicationController
   def destroy
     @house = House.find(params[:id])
     @house.destroy
-    flash[:notice] = "House '#{@house.title}' deleted."
+    flash[:notice] = "Your request for '#{@house.title}' has been sent."
     redirect_to houses_path
   end
   def privacy

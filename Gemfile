@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 ruby '2.3.0'
 gem 'rails', '4.2.6'
@@ -18,6 +18,8 @@ group :development, :test do
   gem 'rspec-rails', '3.3.2'
   gem 'ZenTest', '4.11.0'
   gem 'rails_12factor'
+  gem 'shoulda-matchers', require: false
+  gem 'orderly'
 end
 
 group :test do

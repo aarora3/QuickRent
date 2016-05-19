@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160518185838) do
+ActiveRecord::Schema.define(version: 20160519020505) do
+
+  create_table "dealers", force: :cascade do |t|
+    t.string "name"
+    t.string "area"
+    t.string "email"
+    t.string "contactnumber"
+  end
 
   create_table "histories", force: :cascade do |t|
     t.string  "user_name"
@@ -22,6 +29,7 @@ ActiveRecord::Schema.define(version: 20160518185838) do
     t.date    "end_date",      null: false
     t.decimal "total_cost"
     t.integer "rating"
+    t.string  "name"
   end
 
   create_table "houses", force: :cascade do |t|

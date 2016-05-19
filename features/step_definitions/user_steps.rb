@@ -16,6 +16,18 @@ Then(/^page should have text "([^"]*)"$/) do |arg1|
   arg1 == text
 end
 
+Then(/^I should see Edit Profile$/) do
+   # express the regexp above with the code you wish you had
+end
+
+When(/^I follow Edit Profile$/) do
+  # express the regexp above with the code you wish you had
+end
+
+Then(/^I should see Name$/) do
+   # express the regexp above with the code you wish you had
+end
+
 Given(/^the following users exist:$/) do |user_table|
   # table is a Cucumber::Ast::Table
   # pending # express the regexp above with the code you wish you had
@@ -26,6 +38,16 @@ Given(/^the following users exist:$/) do |user_table|
   end
 end
 
+Then /I should see all histories/ do
+  # Make sure that all the menu itemms in the app are visible in the table
+  # page.should have_css "#myTable tr", :count => House.count
+  page.assert_selector('#histories tbody tr', count: History.count)
+end
+
+Then(/^I should see history records for "(.*?)"$/) do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+
 
 
 Given (/I sign up as "(.+)"/i) do |name|
@@ -34,6 +56,9 @@ end
 
 
 
+Given /^I am on login$/ do |edit_user_path|
+  visit path_to(edit_user_path)
+end
 #When(/^I go to login page$/) do
 #  visit '/houses/welcome'
  # pending # express the regexp above with the code you wish you had
@@ -53,3 +78,6 @@ Then(/^I should get message "([^"]*)"$/) do |arg1|
   arg1 == text
   # pending # express the regexp above with the code you wish you had
 end
+
+
+

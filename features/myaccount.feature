@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Feature: myaccount for QuickRent
   
 As a User
@@ -18,7 +19,7 @@ Then I should be on Privacy Setting page
 Scenario: Reviews path
 Given I am on the My Account page
 When I follow "My Reviews"
-Then I should be on My Reviews page
+Then I should be on Reviews page
 
 Scenario: Edit Profile path
 Given I am on the My Account page
@@ -29,3 +30,4 @@ Scenario: Home
     Given I am on the My Account page
     When I follow "Back to Welcome page"
     Then I should be on the QucikRent welcome page
+
