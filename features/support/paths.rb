@@ -25,13 +25,17 @@ module NavigationHelpers
     when /^the Sign Up page$/
       new_user_path
     when /^the History page$/
-      history_path      
+      history_path 
+    when /^the User History page$/
+        user_history_path
     when /^the House Listings page$/
       houses_path
     when /^the Post an Ad page$/
       new_house_path
     when /^the About Us page$/
       aboutus_path
+    when /^the Contact Us page$/
+      contactus_path
     when /^My Reviews page$/
       reviews_path
     when /^reviews_path\(house\)$/

@@ -15,6 +15,14 @@ Scenario: Records
     
     Then I should see all histories
     
+Scenario: Specific Records
+    
+    When I fill in "search" with "Akshay"
+    
+    And I press "Search"
+    
+    Then I should see history record for "Akshay Kumar Dani"
+    
 Scenario: Home
 
     When I follow "Back to Welcome page"
