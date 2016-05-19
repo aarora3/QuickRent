@@ -34,8 +34,13 @@ module NavigationHelpers
       new_house_path
     when /^the About Us page$/
       aboutus_path
+<<<<<<< HEAD
     when /^the Contact Us page$/
       contactus_path
+=======
+    when /^the FAQ page$/
+      faq_path
+>>>>>>> ffadafc2f3e6c5497edae566e05f9444cb66010a
     when /^My Reviews page$/
       reviews_path
     when /^reviews_path\(house\)$/

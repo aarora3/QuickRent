@@ -1,11 +1,12 @@
-Feature: Ratings and Comments to a House
-  
-  As a User , 
-  if I like a particular house, I can provide my reviews for that house.
-  
-Background: houses have been added to database
+Feature: display list of houses sorted by different criteria
+ 
+  As an avid renter
+  So that I can quickly browse houses based on my preferences
+  I want to see houses sorted by price
 
-Given the following houses exist:
+Background: houses have been added to database
+  
+  Given the following houses exist:
   | title                   | rating     | release_date |  name     | email                    | price      |
   | 11 Catherine Street     | Vestal     | 25-Mar-2016  | Ankush    | aarora3@binghamton.edu   | 325.00     |
   | 44 Schiller             | Binghamton | 26-Mar-2016  | Akshay    | adani@binghamton.edu     | 320.00     |
@@ -14,12 +15,9 @@ Given the following houses exist:
   | murray                  | Vestal     | 5-Apr-2016   | Ankitha   | skatrav1@binghamton.edu  | 250.00     |
   | oak street              | Downtown   | 15-Apr-2016  | Kalyani   | kvisapu1@binghamton.edu  | 275.00     |
 
-Scenario: Go to Review page of house
-  Given I am on the House Listings page
-  When I follow Reviews of "(.*?)"  
-  Then I should see My Reviews page
+  And I am on the House Listings page
 
-Scenario: Create new Review
-  Given I am on My Reviews page
-  When I follow "New Review"
-  Then I should be on the New Reviews page
+Scenario: sort houses in increasing order of price
+  When I follow "Price"
+  # your steps here
+  Then I should see "185.00" before "250.00"

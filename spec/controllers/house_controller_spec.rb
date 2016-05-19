@@ -1,5 +1,7 @@
 require 'spec_helper'
 require 'rails_helper'
+#require 'rspec/rails'
+#require 'shoulda/matchers'
 
 describe HousesController,:type => :controller do
     
@@ -38,9 +40,7 @@ describe HousesController,:type => :controller do
 
   end
 
-  describe '#email' do
-    it { should_not allow_value("blah").for(:email) }
-    it { should allow_value("a@b.com").for(:email) }
-  end
+
     
 end
+

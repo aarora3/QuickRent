@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   def admin
     @users = User.all
   end
-
+  
   def history
     @histories = History.all
     @histories = History.search(params[:search])    
@@ -81,7 +81,9 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
+  def privacy
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
