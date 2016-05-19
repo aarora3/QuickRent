@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   get 'user_history' => 'users#user_history'
 
+  get 'messages' => 'messages#new'
   get 'users/:id/privacy' => 'users#privacy'
 
   

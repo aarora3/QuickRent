@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     ZenTest (4.11.0)
     actionmailer (4.2.6)
@@ -230,9 +230,6 @@ DEPENDENCIES
   simplecov
   sqlite3
   uglifier (>= 2.7.1)
-
-RUBY VERSION
-   ruby 2.3.0p0
 
 BUNDLED WITH
    1.12.4
