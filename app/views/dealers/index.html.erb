@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Property Dealers page</h1>
+<div = "#dealers">
+<table border="1" id = "#dealers">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Area</th>
+      <th>Email</th>
+      <th>Contact Number</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dealers.each do |dealer| %>
+      <tr>
+        <td><%= dealer.name %></td>
+        <td><%= dealer.area %></td>
+        <td><%= dealer.email %></td>
+        <td><%= dealer.contactnumber %></td>
+        <td><%= link_to 'Show', dealer %></td>
+        <td><%= link_to 'Destroy', dealer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'House Listings', houses_path %>
+<%= link_to 'Property Dealers Listings', dealers_path %>
+
+
+<br>
+<br>
+<%= link_to 'Back to Welcome page', users_path %>
+</div>

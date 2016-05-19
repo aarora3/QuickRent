@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   resources :reviews
   resources :histories
   resources :messages
+  resources :dealers
 
 
 end

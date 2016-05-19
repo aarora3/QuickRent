@@ -16,6 +16,9 @@ module NavigationHelpers
     when /^new\s?page$/
   #    '/houses'
       new_house_path
+    when /^new\s?page$/
+  #    '/houses'
+      new_dealers_path  
     when /^the home\s?page$/
       '/houses'
     when /^the QucikRent welcome page$/
@@ -26,8 +29,12 @@ module NavigationHelpers
       new_user_path
     when /^the House Listings page$/
       houses_path
+    when /^the Property Dealers Listings page$/
+      dealers_path  
     when /^the Post an Ad page$/
       new_house_path
+    when /^the Add Property Dealers page$/
+      '/dealers/new_dealers_path'  
     when /^the About Us page$/
       aboutus_path
     when /^My Reviews page$/

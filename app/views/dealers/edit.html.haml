@@ -1,0 +1,22 @@
+-# edit.html.haml using partial
+
+%h1 Edit Property Dealer Listing
+
+= form_tag dealers_path(@dealers), :method => :put do
+
+  = label :dealers, :name, 'Property Dealer Name '
+  = text_field :dealers, 'Name'
+
+  = label :dealers, :area, 'Area'
+  = text_field :dealers, :area
+
+  = label :dealers, :email, 'Owner email'
+  = text_field :dealers, :email
+  
+  = label :dealers, :contactnumber, 'Owner contact number'
+  = text_field :dealers, :contactnumber
+
+  = submit_tag 'Update Property Dealer Listing'
+%br
+%br
+= link_to 'Back to Property Dealer listings', dealers_path
