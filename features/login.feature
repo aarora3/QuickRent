@@ -36,9 +36,9 @@ Scenario: login with blank credentials
   # Then login should be unsuccessful
   Then I should be on the Login page
   
-Scenario: login with admin credentials
-  When I fill in "Email" with "aarora3@binghamton.edu"
-  When I fill in "Password" with "arora"
-  And I press "Submit"
-  # Then login should be unsuccessful
-  Then I should be on the Admin page
+  Scenario: login with admin credentials
+    When I fill in "Email" with "aarora3@binghamton.edu"
+    When I fill in "Password" with "arora"
+    And I press "Submit"
+    # Then login should be unsuccessful
+    Then I should be on the Admin page

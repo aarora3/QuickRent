@@ -35,12 +35,13 @@ module NavigationHelpers
     when /^My Reviews page$/
       reviews_path
     when /^reviews_path\(house\)$/
-      reviews_path(id)
+      reviews_path(house)
     when /^the New Reviews page$/
       '/reviews/new'
-    when /^the (edit|details) page for "(.*)"$/
-      house = House.find_by_title($2)
-      $1 == "details" ? house_path(house) : edit_house_path(house)
+    when /^the details page for "(.*)"$/
+      '/houses/1'
+    when /^the Edit House Listings page$/
+      '/houses/1/edit'
     when /^the Similar Houses page for "(.*)"$/
       house = House.find_by_title($1)
       same_director_path(house)
