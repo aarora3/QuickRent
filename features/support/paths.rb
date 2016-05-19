@@ -22,6 +22,8 @@ module NavigationHelpers
       users_path
     when /^the Login page$/
       login_path
+    when /^the Admin page$/
+      admin_path
     when /^the Sign Up page$/
       new_user_path
     when /^the House Listings page$/
