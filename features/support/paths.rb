@@ -28,6 +28,8 @@ module NavigationHelpers
       new_user_path
     when /^the House Listings page$/
       houses_path
+    when /^the Post an Ad page$/
+      new_house_path
     when /^the About Us page$/
       aboutus_path
     when /^My Reviews page$/
