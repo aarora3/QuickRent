@@ -16,6 +16,18 @@ Then(/^page should have text "([^"]*)"$/) do |arg1|
   arg1 == text
 end
 
+Then(/^I should see Edit Profile$/) do
+   # express the regexp above with the code you wish you had
+end
+
+When(/^I follow Edit Profile$/) do
+  # express the regexp above with the code you wish you had
+end
+
+Then(/^I should see Name$/) do
+   # express the regexp above with the code you wish you had
+end
+
 Given(/^the following users exist:$/) do |user_table|
   # table is a Cucumber::Ast::Table
   # pending # express the regexp above with the code you wish you had
