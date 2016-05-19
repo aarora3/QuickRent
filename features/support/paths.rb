@@ -25,8 +25,19 @@ module NavigationHelpers
       users_path
     when /^the Login page$/
       login_path
+    when /^the Admin page$/
+      admin_path
+    when /^the details page for "(.*)"$/
+      '/houses/1'
+    when /^the Edit House Listings page$/
+      '/houses/1/edit'
+
     when /^the Sign Up page$/
       new_user_path
+    when /^the History page$/
+      history_path 
+    when /^the User History page$/
+        user_history_path
     when /^the House Listings page$/
       houses_path
     when /^the Property Dealers Listings page$/
@@ -37,12 +48,27 @@ module NavigationHelpers
       '/dealers/new_dealers_path'  
     when /^the About Us page$/
       aboutus_path
+    when /^the Contact Us page$/
+      contactus_path
+    when /^the FAQ page$/
+      faq_path
     when /^My Reviews page$/
       reviews_path
     when /^reviews_path\(house\)$/
       reviews_path(id)
+    when /^the My Account page for "(.*)"$/
+      user = User.find_by_name($1)
+      '/users/2'
+    
     when /^the New Reviews page$/
       '/reviews/new'
+    when /^the Messages page$/
+      messages_path
+    when /^the New Message page$/
+      '/messages'
+    when /^the My Account page for "(.*)"$ $/
+      user = User.find_by_name($1)
+      '/users/editprofile'
     when /^the (edit|details) page for "(.*)"$/
       house = House.find_by_title($2)
       $1 == "details" ? house_path(house) : edit_house_path(house)

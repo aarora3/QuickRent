@@ -10,6 +10,7 @@
   %table#houses
     %thead
       %tr
+        %th Name
         %th UserName
         %th User ID
         %th Email
@@ -21,6 +22,7 @@
     %tbody
       - @histories.each do |history|
         %tr
+          %td= history.name
           %td= history.user_name
           %td= history.user_id
           %td= history.email

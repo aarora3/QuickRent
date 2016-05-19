@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20160519020505) do
     t.date    "end_date",      null: false
     t.decimal "total_cost"
     t.integer "rating"
+    t.string  "name"
   end
 
   create_table "houses", force: :cascade do |t|

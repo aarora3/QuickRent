@@ -2,6 +2,15 @@
 
 = form_tag houses_path do
 
+  - if @house.errors.any?
+    #error_explanation
+      %h4
+        = pluralize(@house.errors.count, "error")
+        "prohibited this house from being saved:"
+      %ul 
+        - @house.errors.full_messages.each do |msg|
+          %li= msg
+  
   = label :house, :title, 'House Number / Street'
   = text_field :house, 'title'
 
@@ -20,16 +29,14 @@
   = label :house, :description, 'Description'
   = text_field :house, :description
 
-  = label :house, :release_date, 'Owner'
+  = label :house, :name, 'Owner'
   = text_field :house, :name
 
-  = label :house, :release_date, 'Owner Email'
+  = label :house, :email, 'Owner Email'
   = email_field :house, :email
 
-  = label :house, :release_date, 'Owner Contact Number'
+  = label :house, :contactnumber, 'Owner Contact Number'
   = text_field :house, :contactnumber
-
-
 
   = submit_tag 'Submit'
 %p~ "\n"

@@ -1,6 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
+<<<<<<< HEAD
       "/home/ubuntu/workspace/QuickRent/app/models/dealer.rb": [
         1,
         null
@@ -163,5 +164,9 @@
       ]
     },
     "timestamp": 1463688207
+=======
+    },
+    "timestamp": 1463687951
+>>>>>>> dc5aa64d8738d8c74088fa59f27c92c055868b61
   }
 }
