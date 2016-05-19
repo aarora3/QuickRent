@@ -61,8 +61,10 @@ class HousesController < ApplicationController
     flash[:notice] = "House '#{@house.title}' deleted."
     redirect_to houses_path
   end
-  
+  def privacy
+    #
+  end
   def aboutus
   end
-  
+
 end

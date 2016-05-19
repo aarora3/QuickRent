@@ -30,8 +30,32 @@ module NavigationHelpers
       new_house_path
     when /^the About Us page$/
       aboutus_path
+    when /^the Help page$/
+      help_path
+    when /^Cost page$/
+      cost_path
+    when /^Need page$/
+      need_path
+    when /^Proedit page$/
+      proedit_path
+    when /^the Place page$/
+      place_path
+    when /^Mainst page$/
+      mainst_path
+    when /^Chapin page$/
+      chapin_path
+    when /^Floral page$/
+      floral_path
+    when /^the My Account page$/
+      '/houses/myaccount'
+    when /^Privacy Setting page$/
+      '/privacy'
+    when /^Edit Profile page$/
+      '/editprofile'
     when /^My Reviews page$/
-      reviews_path
+      '/myreview'
+	  
+      
     when /^reviews_path\(house\)$/
       reviews_path(id)
     when /^the New Reviews page$/
