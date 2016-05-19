@@ -34,6 +34,9 @@ end
 
 
 
+Given /^I am on login$/ do |edit_user_path|
+  visit path_to(edit_user_path)
+end
 #When(/^I go to login page$/) do
 #  visit '/houses/welcome'
  # pending # express the regexp above with the code you wish you had

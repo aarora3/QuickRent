@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get 'myaccount' => 'users#myaccount'
   get 'history' => 'users#history'
   get 'index' => 'messages#index'
-  
+  get 'messages' => 'messages#new'
   resources :users
   resources :houses
   resources :reviews
