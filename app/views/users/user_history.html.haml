@@ -1,5 +1,9 @@
 %h1 Welcome to your History
+
 %p
+  %strong Hello
+  = params[:name]
+
 
   
 %table#houses
@@ -26,3 +30,5 @@
         %td= history.end_date
         %td= history.total_cost
         %td= history.rating
+        
+= link_to 'Back to Welcome page', users_path        
