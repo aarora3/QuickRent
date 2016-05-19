@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    current_user = User.find_by_id(session[:current_user_id])
+    #current_user = User.find_by_id(session[:current_user_id])
     @users = User.all
   end
   
@@ -81,7 +81,9 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
+  def privacy
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

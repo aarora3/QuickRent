@@ -2,7 +2,7 @@ Feature: display list of houses sorted by different criteria
  
   As an avid renter
   So that I can quickly browse houses based on my preferences
-  I want to see houses sorted by name
+  I want to see houses sorted by price
 
 Background: houses have been added to database
   
@@ -17,7 +17,7 @@ Background: houses have been added to database
 
   And I am on the House Listings page
 
-Scenario: sort houses in increasing order of date
-  When I follow "From Date"
+Scenario: sort houses in increasing order of price
+  When I follow "Price"
   # your steps here
-  Then I should see "207" before "209"
+  Then I should see "185.00" before "250.00"
