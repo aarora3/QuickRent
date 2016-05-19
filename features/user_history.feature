@@ -11,6 +11,8 @@ Scenario: User History page content
 
     Then page should have text "Welcome"
     
+    Then I should see user history page
+    
 Scenario: Home
 
     When I follow "Back to Welcome page"
