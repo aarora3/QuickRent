@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Feature: myaccount for QuickRent
   
 As a User
