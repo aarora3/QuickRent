@@ -1,0 +1,23 @@
+%h1 Add Property Dealers
+
+= form_tag dealers_path do
+
+  = label :dealer, :name, 'Property Dealer Name '
+  = text_field :dealer, :name
+
+  = label :dealer, :area, 'Area'
+  = select :dealer, :area, ['Vestal','Binghamton','Downtown','Endicott']
+
+  = label :dealer, :email, 'Property Dealer Email'
+  = email_field :dealer, :email
+
+  = label :dealer, :contactnumber, 'Owner Contact Number'
+  = text_field :dealer, :contactnumber
+
+
+
+  = submit_tag 'Submit'
+%p~ "\n"
+%p~ "\n"
+= link_to 'Back to Property Dealer Listings', dealers_path
+%p~ "\n"

@@ -16,6 +16,9 @@ module NavigationHelpers
     when /^new\s?page$/
   #    '/houses'
       new_house_path
+    when /^new\s?page$/
+  #    '/houses'
+      new_dealers_path  
     when /^the home\s?page$/
       '/houses'
     when /^the QucikRent welcome page$/
@@ -37,16 +40,47 @@ module NavigationHelpers
         user_history_path
     when /^the House Listings page$/
       houses_path
+    when /^the Property Dealers Listings page$/
+      dealers_path  
     when /^the Post an Ad page$/
       new_house_path
+    when /^the Add Property Dealers page$/
+      '/dealers/new_dealers_path'  
     when /^the About Us page$/
       aboutus_path
+    when /^the Help page$/
+      help_path
+    when /^Cost page$/
+      cost_path
+    when /^Need page$/
+      need_path
+    when /^Proedit page$/
+      proedit_path
+    when /^the Place page$/
+      place_path
+    when /^Mainst page$/
+      mainst_path
+    when /^Chapin page$/
+      chapin_path
+    when /^Floral page$/
+      floral_path
+    when /^the My Account page$/
+      '/houses/myaccount'
+    when /^Privacy Setting page$/
+      '/privacy'
+    when /^Edit Profile page$/
+      '/editprofile'
     when /^the Contact Us page$/
       contactus_path
     when /^the FAQ page$/
       faq_path
     when /^My Reviews page$/
       reviews_path
+
+    when /^Reviews page$/
+      '/myreview'
+	  
+      
     when /^reviews_path\(house\)$/
       reviews_path(id)
     when /^the My Account page for "(.*)"$/

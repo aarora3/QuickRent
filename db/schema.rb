@@ -13,6 +13,13 @@
 
 ActiveRecord::Schema.define(version: 20160519085353) do
 
+  create_table "dealers", force: :cascade do |t|
+    t.string "name"
+    t.string "area"
+    t.string "email"
+    t.string "contactnumber"
+  end
+
   create_table "histories", force: :cascade do |t|
     t.string  "user_name"
     t.integer "user_id"

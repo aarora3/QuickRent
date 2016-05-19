@@ -68,8 +68,10 @@ class HousesController < ApplicationController
     flash[:notice] = "Your request for '#{@house.title}' has been sent."
     redirect_to houses_path
   end
-  
+  def privacy
+    #
+  end
   def aboutus
   end
-  
+
 end
