@@ -14,11 +14,17 @@ Background: I am a user
   Scenario: post an ad
     Given I am on the Post an Ad page
     When  I fill in "House Number / Street" with "11 Catherine St"
+    And I fill in "Owner" with "Ankush"
+    And I fill in "Owner Email" with "ankusharora1190@gmail.com"
+    And I fill in "Price" with "40"
     And I press "Submit"
     Then I should see "11 Catherine St was successfully created."
 
   Scenario: new ad visible in House Listings table
     Given I am on the Post an Ad page
     When  I fill in "House Number / Street" with "11 Catherine St"
+    And I fill in "Owner" with "Ankush"
+    And I fill in "Owner Email" with "ankusharora1190@gmail.com"
+    And I fill in "Price" with "40"
     And I press "Submit"
     Then I should see "11 Catherine St" in the House Listings table

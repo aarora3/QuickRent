@@ -1,4 +1,4 @@
-Feature: display list of houses filtered by rating
+Feature: display list of houses filtered by area
  
   As a concerned parent
   So that I can quickly browse houses appropriate for my family

@@ -17,7 +17,7 @@ Background: houses have been added to database
 
   And I am on the House Listings page
 
-Scenario: sort houses in increasing order of release date
+Scenario: sort houses in increasing order of date
   When I follow "From Date"
   # your steps here
   Then I should see "207" before "209"
