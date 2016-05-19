@@ -8,12 +8,12 @@
 
 User.create(name: 'Ankush Arora', email: 'aarora3@binghamton.edu', password: 'password', user_id: '1', admin: true)
 
-houses = [{:title => '11 Catherine Street', :rating => 'Vestal', :release_date => '25-Mar-2016',:todate => '25-Mar-2016',:price => '325.00'},
-    	  {:title => '44 Schiller', :rating => 'Binghamton', :release_date => '26-Mar-2016',:todate => '27-Mar-2016',:price => '320.00'},
-    	  {:title => '207', :rating => 'Downtown', :release_date => '21-Mar-2016',:todate => '25-Mar-2016',:price =>'315.00'},
-      	  {:title => '209', :rating => 'Endicott', :release_date => '10-Apr-2016',:todate => '13-Apr-2016',:price=>'185.00'},
-      	  {:title => 'murray', :rating => 'Vestal', :release_date => '5-Apr-2016',:todate => '8-Apr-2016',:price =>'250.00'},
-      	  {:title => 'oak', :rating => 'Downtown', :release_date => '15-Apr-2016',:todate => '18-Apr-2016',:price =>'275.00'},
+houses = [{:title => '11 Catherine Street', :rating => 'Vestal', :release_date => '25-Mar-2016',:todate => '25-Mar-2016',:price => '325.00',:name=>'Ankush',:email=>'aarora4@binghamton.edu'},
+    	  {:title => '44 Schiller', :rating => 'Binghamton', :release_date => '26-Mar-2016',:todate => '27-Mar-2016',:price => '320.00',:name=>'Akshay',:email=>'adani2@binghamton.edu'},
+    	  {:title => '207 Main Street', :rating => 'Downtown', :release_date => '21-Mar-2016',:todate => '25-Mar-2016',:price =>'315.00',:name=>'Rasika',:email=>'rkhiste2@binghamton.edu'},
+      	  {:title => '209 Main Street', :rating => 'Endicott', :release_date => '10-Apr-2016',:todate => '13-Apr-2016',:price=>'185.00',:name=>'Raksha',:email=>'rsindhu2@binghamton.edu'},
+      	  {:title => 'murray', :rating => 'Vestal', :release_date => '5-Apr-2016',:todate => '8-Apr-2016',:price =>'250.00',:name=>'Ankitha',:email=>'skatrav2@binghamton.edu'},
+      	  {:title => 'oak street', :rating => 'Downtown', :release_date => '15-Apr-2016',:todate => '18-Apr-2016',:price =>'275.00',:name=>'Kalyani',:email=>'kvisapu1@binghamton.edu'},
   	 ]
 
 

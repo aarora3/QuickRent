@@ -30,6 +30,8 @@ module NavigationHelpers
       new_house_path
     when /^the About Us page$/
       aboutus_path
+    when /^the FAQ page$/
+      faq_path
     when /^My Reviews page$/
       reviews_path
     when /^reviews_path\(house\)$/

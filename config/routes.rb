@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
   
   get 'aboutus' => 'houses#aboutus'
+  get 'faq' => 'houses#faq'
   get 'contactus' => 'houses#contactus'
   get 'admin' => 'users#admin'
   get 'myaccount' => 'users#myaccount'
