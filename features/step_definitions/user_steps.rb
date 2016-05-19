@@ -68,3 +68,6 @@ Then(/^I should get message "([^"]*)"$/) do |arg1|
   arg1 == text
   # pending # express the regexp above with the code you wish you had
 end
+
+
+

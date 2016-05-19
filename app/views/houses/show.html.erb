@@ -79,10 +79,13 @@
   <%= @house.description %>
 </p>
 
-<%= link_to 'Edit', edit_house_path(@house) %> |
-<%= button_to 'Delete', house_path(@house), :method => :delete, :confirm => 'Are you sure?' %>
+<%= link_to 'Book this house', house_path(@house), :method => :delete %>
+<br>
+<%= link_to 'Edit', edit_house_path(@house) %>
+<br>
 <%= link_to 'Back to house listings', houses_path %>
 
 <br><br>
 <label>Location :</label>
   <div id="map-canvas" style="width:300px;height:200px"/>
+  

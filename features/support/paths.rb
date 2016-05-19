@@ -22,6 +22,13 @@ module NavigationHelpers
       users_path
     when /^the Login page$/
       login_path
+    when /^the Admin page$/
+      admin_path
+    when /^the details page for "(.*)"$/
+      '/houses/1'
+    when /^the Edit House Listings page$/
+      '/houses/1/edit'
+
     when /^the Sign Up page$/
       new_user_path
     when /^the House Listings page$/
@@ -30,6 +37,8 @@ module NavigationHelpers
       new_house_path
     when /^the About Us page$/
       aboutus_path
+    when /^the FAQ page$/
+      faq_path
     when /^My Reviews page$/
       reviews_path
     when /^reviews_path\(house\)$/

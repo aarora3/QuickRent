@@ -65,7 +65,7 @@ class HousesController < ApplicationController
   def destroy
     @house = House.find(params[:id])
     @house.destroy
-    flash[:notice] = "House '#{@house.title}' deleted."
+    flash[:notice] = "Your request for '#{@house.title}' has been sent."
     redirect_to houses_path
   end
   
