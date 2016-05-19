@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get 'myaccount' => 'users#myaccount'
   get 'history' => 'users#history'
   get 'index' => 'messages#index'
+  get 'messages' => 'messages#new'
   get 'users/:id/privacy' => 'users#privacy'
   
   resources :users
