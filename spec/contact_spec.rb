@@ -8,3 +8,12 @@ RSpec.describe UsersController, type: :routing do
     end
   end
 end
+
+RSpec.feature 'Contact Us' do
+  scenario "Contact Us page content" do
+
+    text = "You may contact any of the developers below for more information, queries or suggestions."
+    visit contactus_path
+    expect(page).to have_content(text)
+  end
+end

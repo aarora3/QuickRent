@@ -17,9 +17,10 @@ Rails.application.routes.draw do
   get 'user_history' => 'users#user_history'
   
   resources :users
+  resources :histories
+  
   resources :houses
   resources :reviews
-  resources :histories
   resources :messages
 
 

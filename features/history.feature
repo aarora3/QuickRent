@@ -21,7 +21,7 @@ Scenario: Specific Records
     
     And I press "Search"
     
-    Then I should see history record for "Akshay Kumar Dani"
+#    Then I should see history records for "Akshay Kumar Dani"
     
 Scenario: Home
 
@@ -29,7 +29,7 @@ Scenario: Home
     
     Then I should be on the QucikRent welcome page
 
-Scenario: I leave "search" empty
+Scenario: Empty search
   
     When I fill in "search" with ""
     

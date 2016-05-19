@@ -15,3 +15,17 @@ RSpec.feature 'History' do
     expect(page).to have_content("History")
   end
 end
+
+RSpec.feature 'History' do
+    scenario "Specific Records" do
+        visit history_path
+        expect(page).to have_content("History")
+    end
+end
+
+RSpec.feature 'History' do
+    scenario "Empty search" do
+        visit history_path
+        expect(page).to have_content("")
+    end
+end

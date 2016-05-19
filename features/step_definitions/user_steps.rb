@@ -32,6 +32,10 @@ Then /I should see all histories/ do
   page.assert_selector('#histories tbody tr', count: History.count)
 end
 
+Then(/^I should see history records for "(.*?)"$/) do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+
 
 
 Given (/I sign up as "(.+)"/i) do |name|

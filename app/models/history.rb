@@ -17,4 +17,8 @@ class History < ActiveRecord::Base
     end
   end 
   
+  def new  
+    @history =  History.find(params[:name])  
+  end  
+  
 end
