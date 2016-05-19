@@ -10,7 +10,7 @@
   function set_map(state, city){
     var mapOptions = {
       center: new google.maps.LatLng(25.687944,-100.309403),
-      zoom: 14,
+        zoom: 14,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     var map = new google.maps.Map(document.getElementById("map-canvas"),
@@ -38,45 +38,51 @@
     return false;
   }
     $(document).ready(function(){
-    set_map('<%= @user.city %>', '<%= @user.house_address %>');
-  })
+    set_map('<%= @house.title %>', '<%= @house.rating %>');
+    })
 </script>
-    
-<p id="notice"><%= notice %></p>
-<h1>My Account</h1>
 
+<h2>
+  Details about 
+  <%= @house.title %>
+</h2>
 <p>
-  <strong>Name:</strong>
-  <%= @user.name %>
+  <strong>Area:</strong>
+  <%= @house.rating %>
+</p>
+<p>
+  <strong>Date available from:</strong>
+  <%= @house.release_date.strftime("%B %d, %Y") %>
+</p>
+<p>
+  <strong>Date available to:</strong>
+  <%= @house.todate.strftime("%B %d, %Y") %>
+</p>
+<p>
+  <strong>Price per day:</strong>
+  <%= @house.price %>
+</p>
+<p>
+  <strong>Owner name:</strong>
+  <%= @house.name %>
+</p>
+<p>
+  <strong>Owner email:</strong>
+  <%= @house.email %>
+</p>
+<p>
+  <strong>Owner contact number:</strong>
+  <%= @house.contactnumber %>
+</p>
+<p>
+  <strong>More Description:</strong>
+  <%= @house.description %>
 </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+<%= link_to 'Edit', edit_house_path(@house) %> |
+<%= button_to 'Delete', house_path(@house), :method => :delete, :confirm => 'Are you sure?' %>
+<%= link_to 'Back to house listings', houses_path %>
 
-<p>
-  <strong>Contact Number:</strong>
-  <%= @user.contactnumber %>
-</p>
-
-<p>
-  <strong>House Address:</strong>
-  <%= @user.house_address %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @user.city %>
-</p>
-
-<%= link_to 'Edit Profile', edit_user_path(@user) %> |
-<br><br>
-<%= link_to 'Back to Welcome page', users_path %>
-<br><br>
-<%= link_to 'House Listings', houses_path %>
 <br><br>
 <label>Location :</label>
-  <br />
   <div id="map-canvas" style="width:300px;height:200px"/>
-
