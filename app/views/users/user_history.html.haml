@@ -1,4 +1,28 @@
 %h1 Welcome to your History
-
 %p
-  %strong Name:
+
+  
+%table#houses
+  %thead
+    %tr
+      %th Name
+      %th UserName
+      %th User ID
+      %th Email
+      %th Rented House
+      %th Start Date
+      %th End Date
+      %th Total Cost ($)
+      %th Rating
+  %tbody
+    - @user_history.each do |history|
+      %tr
+        %td= history.name
+        %td= history.user_name
+        %td= history.user_id
+        %td= history.email
+        %td= history.house_address
+        %td= history.start_date
+        %td= history.end_date
+        %td= history.total_cost
+        %td= history.rating
