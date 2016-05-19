@@ -21,4 +21,9 @@ class History < ActiveRecord::Base
     @history =  History.find(params[:name])  
   end  
   
+  def self.record(search)
+    key = "%#{search}%"
+    where('name LIKE ?', key)
+  end
+  
 end

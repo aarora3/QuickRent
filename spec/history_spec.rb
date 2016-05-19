@@ -24,8 +24,15 @@ RSpec.feature 'History' do
 end
 
 RSpec.feature 'History' do
-    scenario "Empty search" do
+    scenario "Negative Records" do
         visit history_path
         expect(page).to have_content("")
+    end
+end
+
+RSpec.feature 'History' do
+    scenario "Empty search" do
+        visit history_path
+        expect(page).to have_content("History")
     end
 end

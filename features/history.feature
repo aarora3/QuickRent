@@ -22,6 +22,12 @@ Scenario: Specific Records
     And I press "Search"
     
 #    Then I should see history records for "Akshay Kumar Dani"
+
+Scenario: Negative Records
+  
+    When I fill in "search" with "hh"
+    
+    And I press "Search"
     
 Scenario: Home
 
