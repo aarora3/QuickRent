@@ -28,12 +28,17 @@ module NavigationHelpers
       history_path      
     when /^the House Listings page$/
       houses_path
+    when /^the Post an Ad page$/
+      new_house_path
     when /^the About Us page$/
       aboutus_path
     when /^My Reviews page$/
       reviews_path
     when /^reviews_path\(house\)$/
       reviews_path(id)
+    when /^the My Account page for "(.*)"$/
+      user = User.find_by_name($1)
+      '/users/2'
     when /^the New Reviews page$/
       '/reviews/new'
     when /^the (edit|details) page for "(.*)"$/

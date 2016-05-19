@@ -7,16 +7,16 @@ Feature: display list of houses sorted by different criteria
 Background: houses have been added to database
   
   Given the following houses exist:
-  | title                   | rating     | release_date |
-  | 11 Catherine Street     | Vestal     | 25-Mar-2016  |
-  | 44 Schiller             | Binghamton | 26-Mar-2016  |
-  | 207                     | Downtown   | 21-Mar-2016  |
-  | 209                     | Endicott   | 10-Apr-2016  |
-  | murray                  | Vestal     | 5-Apr-2016   |
+  | title                   | rating     | release_date |  name     | email                    | price  |
+  | 11 Catherine Street     | Vestal     | 25-Mar-2016  | Ankush    | aarora3@binghamton.edu   | 40     |
+  | 44 Schiller             | Binghamton | 26-Mar-2016  | Akshay    | adani@binghamton.edu     | 50     |
+  | 207 main street         | Downtown   | 21-Mar-2016  | Rasika    | rkhiste1@binghamton.edu  | 60     |
+  | 209 main street         | Endicott   | 10-Apr-2016  | Raksha    | rsindhu1@binghamton.edu  | 70     |
+  | murray                  | Vestal     | 5-Apr-2016   | Ankitha   | skatrav1@binghamton.edu  | 80     |
 
   And I am on the House Listings page
 
 Scenario: sort houses in increasing order of release date
-  When I follow "Date available"
+  When I follow "From Date"
   # your steps here
   Then I should see "207" before "209"

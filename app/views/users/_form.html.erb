@@ -16,22 +16,25 @@
     <%= form_for(@user) do |f| %>
       <%= f.label :name %>
       <%= f.text_field :name %>
-      </br></br>
+      </br>
       <%= f.label :email %>
       <%= f.email_field :email %>
-      </br></br>   
+      </br>  
       <%= f.label :password %>
       <%= f.password_field :password %>
-      </br></br>
+      </br>
+      <%= f.label :passwordconfirmation %>
+      <%= f.password_field :passwordconfirmation %>
+      </br>
       <%= f.label :contactnumber %>
       <%= f.text_field :contactnumber %>
-      </br></br>
+      </br>
       <%= f.label :house_address %>
       <%= f.text_field :house_address %>
-      </br></br>
+      </br>
       <%= f.label :city %>
       <%= f.text_field :city %>
-      </br></br>
+      </br><br>
       <%= f.submit "Submit", class: "btn btn-primary" %>
       </br></br>
     <% end %>
