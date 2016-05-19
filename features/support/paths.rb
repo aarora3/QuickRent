@@ -24,6 +24,8 @@ module NavigationHelpers
       login_path
     when /^the Sign Up page$/
       new_user_path
+    when /^the History page$/
+      history_path      
     when /^the House Listings page$/
       houses_path
     when /^the About Us page$/

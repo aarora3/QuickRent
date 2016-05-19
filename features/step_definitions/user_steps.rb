@@ -26,6 +26,12 @@ Given(/^the following users exist:$/) do |user_table|
   end
 end
 
+Then /I should see all histories/ do
+  # Make sure that all the menu itemms in the app are visible in the table
+  # page.should have_css "#myTable tr", :count => House.count
+  page.assert_selector('#histories tbody tr', count: History.count)
+end
+
 
 
 Given (/I sign up as "(.+)"/i) do |name|
