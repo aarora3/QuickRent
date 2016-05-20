@@ -11,4 +11,4 @@ Feature: Messaging
  
   Scenario: Create new Message
   Given I am on the New Message page
-  Then I should see "Description"
+  Then I should see description

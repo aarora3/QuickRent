@@ -4,7 +4,7 @@ require 'rails_helper'
 RSpec.feature 'As a User, I want to message a person.' do
   scenario "Go to messages page" do
     visit '/messages'
-    expect(page).to have_content("Description")
+    expect(page).to have_content("New Message")
     
    
   end
