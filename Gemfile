@@ -9,7 +9,7 @@ gem 'simple_form', '~> 3.2', '>= 3.2.1'
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
 #  gem 'bootstrap-sass'
-  gem 'bcrypt'
+#  gem 'bcrypt'
   gem 'sqlite3'
   gem 'byebug'
   gem 'database_cleaner', '1.4.1'
@@ -51,3 +51,4 @@ gem 'bootstrap-sass', '~> 3.1.0'
 
 # Deploy with Capistrano
 # gem 'capistrano'
+gem 'bcrypt'
