@@ -1,7 +1,27 @@
 require 'spec_helper'
 require 'rails_helper'
-#require 'rspec/rails'
-#require 'shoulda/matchers'
+require 'rspec/rails'
+require 'shoulda/matchers'
+
+RSpec.feature 'As a renter, I want to see the welcome page' do
+  scenario "show welcome page" do
+    visit users_path
+    expect(page).to have_content("Welcome ")
+  end
+end
+RSpec.feature 'As a renter, I want to see the login page' do
+  scenario "show login page" do
+    visit login_path
+    expect(page).to have_content("Login ")
+  end
+end
+RSpec.feature 'As a renter, I want to see the signup page' do
+  scenario "show signup page" do
+    visit new_user_path
+    expect(page).to have_content("Sign Up ")
+  end
+end
+
 
 describe HousesController,:type => :controller do
     
