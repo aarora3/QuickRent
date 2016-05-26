@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/home/ubuntu/workspace/app/controllers/houses_controller.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/controllers/houses_controller.rb": [
         1,
         null,
         1,
@@ -80,7 +80,7 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/controllers/application_controller.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -88,16 +88,16 @@
         1,
         null
       ],
-      "/home/ubuntu/workspace/app/helpers/application_helper.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/app/helpers/book_helper.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/helpers/book_helper.rb": [
         1,
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/helpers/houses_helper.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/helpers/houses_helper.rb": [
         1,
         null,
         1,
@@ -105,23 +105,23 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/helpers/message_helper.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/helpers/message_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/app/helpers/messages_helper.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/helpers/messages_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/app/helpers/privacy_helper.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/helpers/privacy_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/app/helpers/reviews_helper.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/helpers/reviews_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/app/helpers/sessions_helper.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/helpers/sessions_helper.rb": [
         1,
         null,
         null,
@@ -174,12 +174,12 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/helpers/users_helper.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/helpers/users_helper.rb": [
         1,
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/controllers/users_controller.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/controllers/users_controller.rb": [
         1,
         1,
         null,
@@ -287,7 +287,7 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/models/user.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/models/user.rb": [
         1,
         1,
         1,
@@ -332,11 +332,11 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/models/dealer.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/models/dealer.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/app/controllers/dealers_controller.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/controllers/dealers_controller.rb": [
         1,
         1,
         null,
@@ -407,7 +407,7 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/models/house.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/models/house.rb": [
         1,
         1,
         1,
@@ -434,7 +434,7 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/models/history.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/models/history.rb": [
         1,
         1,
         null,
@@ -465,7 +465,7 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/controllers/sessions_controller.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/controllers/sessions_controller.rb": [
         1,
         null,
         1,
@@ -503,7 +503,7 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/controllers/messages_controller.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/controllers/messages_controller.rb": [
         1,
         1,
         null,
@@ -555,11 +555,11 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/models/message.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/models/message.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/app/controllers/reviews_controller.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/controllers/reviews_controller.rb": [
         1,
         1,
         null,
@@ -622,13 +622,13 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/models/review.rb": [
+      "/home/ubuntu/workspace/QuickRent/app/models/review.rb": [
         1,
         1,
         1,
         null
       ]
     },
-    "timestamp": 1463761714
+    "timestamp": 1464249518
   }
 }

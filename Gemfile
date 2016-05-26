@@ -9,7 +9,7 @@ gem 'simple_form', '~> 3.2', '>= 3.2.1'
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
   gem 'bootstrap-sass'
-  gem 'bcrypt-ruby'
+  gem 'bcrypt'
   gem 'sqlite3'
   gem 'byebug'
   gem 'database_cleaner', '1.4.1'
@@ -17,7 +17,6 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-rails', '3.3.2'
   gem 'ZenTest', '4.11.0'
-  gem 'rails_12factor'
   gem 'shoulda-matchers', require: false
   gem 'orderly'
 end
