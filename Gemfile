@@ -19,6 +19,7 @@ group :development, :test do
   gem 'ZenTest', '4.11.0'
   gem 'shoulda-matchers', require: false
   gem 'orderly'
+#  gem 'rails-assets-bootstrap'
 end
 
 group :test do
