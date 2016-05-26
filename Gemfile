@@ -8,7 +8,7 @@ gem 'simple_form', '~> 3.2', '>= 3.2.1'
 
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
-  gem 'bootstrap-sass'
+#  gem 'bootstrap-sass'
   gem 'bcrypt'
   gem 'sqlite3'
   gem 'byebug'
@@ -44,6 +44,8 @@ gem 'uglifier', '>= 2.7.1'
 gem 'jquery-rails'
 gem 'haml'
 
+gem 'bootstrap-slider-rails'
+gem 'bootstrap-sass', '~> 3.1.0'
 # Use unicorn as the web server
 # gem 'unicorn'
 
